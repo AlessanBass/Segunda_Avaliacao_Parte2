@@ -121,9 +121,12 @@ class ListaNomes : public Lista {
 			cout << elemento << endl;
 		}
 	}
-
 	void mostraNElementos(int n) override{
-
+		cout << ">>> MOSTRANDO " << n << " NOMES:" << endl;
+		for(int i = 0; i < n; i++){
+			cout << lista[i] << endl;
+			cout << "-----------------------------" << endl;
+		}	
 	}
 };
 
@@ -355,7 +358,7 @@ int main () {
 	vector<Lista*> listaDeListas;
 	int quantidade;
 	
-/*  	ListaNomes listaNomes;
+  	ListaNomes listaNomes;
 	listaNomes.entradaDeDados();
 	listaDeListas.push_back(&listaNomes);
 	
@@ -369,12 +372,7 @@ int main () {
 	
 	ListaIdades listaIdades;
 	listaIdades.entradaDeDados();
-	listaDeListas.push_back(&listaIdades); */
-
-	ListaNomes listaNomes;
-	listaNomes.entradaDeDados();
-	listaDeListas.push_back(&listaNomes);
-
+	listaDeListas.push_back(&listaIdades); 
 	
 	for (Lista* l : listaDeListas) {
 		l->mostraMediana();
