@@ -116,7 +116,10 @@ class ListaNomes : public Lista {
 	}
 
 	void listarEmOrdem(){
-
+		cout << ">>> MOSTRANDO OS NOMES EM ORDEM ALFABETICA: " << endl;
+		for(auto elemento : lista){
+			cout << elemento << endl;
+		}
 	}
 
 	void mostraNElementos(int n) override{
@@ -352,7 +355,7 @@ int main () {
 	vector<Lista*> listaDeListas;
 	int quantidade;
 	
- 	ListaNomes listaNomes;
+/*  	ListaNomes listaNomes;
 	listaNomes.entradaDeDados();
 	listaDeListas.push_back(&listaNomes);
 	
@@ -366,7 +369,11 @@ int main () {
 	
 	ListaIdades listaIdades;
 	listaIdades.entradaDeDados();
-	listaDeListas.push_back(&listaIdades);
+	listaDeListas.push_back(&listaIdades); */
+
+	ListaNomes listaNomes;
+	listaNomes.entradaDeDados();
+	listaDeListas.push_back(&listaNomes);
 
 	
 	for (Lista* l : listaDeListas) {
