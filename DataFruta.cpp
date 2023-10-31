@@ -279,10 +279,19 @@ class ListaSalarios : public Lista  {
 	}
 
 	void listarEmOrdem() override {
+		cout << ">>> MOSTRANDO AS IDADES DO MENOS PARA A MAIOR: " << endl;
+		for(auto elemento : lista){
+			cout << elemento << endl;
+		}
 
 	}
 
 	void mostraNElementos(int n) override{
+		cout << ">>> MOSTRANDO " << n << " IDADES:" << endl;
+		for(int i = 0; i < n; i++){
+			cout << lista[i] << endl;
+			cout << "-----------------------------" << endl;
+		}	
 
 	}
 
@@ -346,10 +355,19 @@ class ListaIdades : public Lista {
 	}
 
 	void listarEmOrdem() override {
+		cout << ">>> MOSTRANDO AS IDADES DO MENOR PARA A MAIOR: " << endl;
+		for(auto elemento : lista){
+			cout << elemento << endl;
+		}
 
 	}
 
 	void mostraNElementos(int n) override{
+		cout << ">>> MOSTRANDO " << n << " IDADES:" << endl;
+		for(int i = 0; i < n; i++){
+			cout << lista[i] << endl;
+			cout << "-----------------------------" << endl;
+		}	
 
 	}
 };
