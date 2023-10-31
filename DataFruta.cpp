@@ -122,6 +122,13 @@ class ListaNomes : public Lista {
 		}
 	}
 	void mostraNElementos(int n) override{
+		if( n > lista.size()){
+			cout << "Valor maior do que numero de elementos na lista!" << endl;
+			n = lista.size();
+		}else if(n < lista.size() < 0){
+			cout << "Valor invalido, mostrando todos os elementos!" << endl;
+			n = lista.size();
+		}
 		cout << ">>> MOSTRANDO " << n << " NOMES:" << endl;
 		for(int i = 0; i < n; i++){
 			cout << lista[i] << endl;
@@ -220,6 +227,13 @@ class ListaDatas : public Lista {
 	}
 
 	void mostraNElementos(int n) override{
+		if( n > lista.size()){
+			cout << "Valor maior do que numero de elementos na lista!" << endl;
+			n = lista.size();
+		}else if(n < lista.size() < 0){
+			cout << "Valor invalido, mostrando todos os elementos!" << endl;
+			n = lista.size();
+		}
 		cout << ">>> MOSTRANDO " << n << " DATAS:" << endl;
 		for(int i = 0; i < n; i++){
 			cout << lista[i].toString() << endl;
@@ -277,7 +291,7 @@ class ListaSalarios : public Lista  {
 		cout << "O menor salario e: " << lista.front() << endl;
 		
 	}
-	
+
 	void mostraMaior()override {
 		cout << ">>> MOSTRANDO O MAIOR SALARIO: " << endl;
 		cout << "O maior salario e: " << lista.back() << endl;
@@ -293,6 +307,13 @@ class ListaSalarios : public Lista  {
 	}
 
 	void mostraNElementos(int n) override{
+		if( n > lista.size()){
+			cout << "Valor maior do que numero de elementos na lista!" << endl;
+			n = lista.size();
+		}else if(n < lista.size() < 0){
+			cout << "Valor invalido, mostrando todos os elementos!" << endl;
+			n = lista.size();
+		}
 		cout << ">>> MOSTRANDO " << n << " IDADES:" << endl;
 		for(int i = 0; i < n; i++){
 			cout << lista[i] << endl;
@@ -368,6 +389,13 @@ class ListaIdades : public Lista {
 	}
 
 	void mostraNElementos(int n) override{
+		if( n > lista.size()){
+			cout << "Valor maior do que numero de elementos na lista!" << endl;
+			n = lista.size();
+		}else if(n < lista.size() < 0){
+			cout << "Valor invalido, mostrando todos os elementos!" << endl;
+			n = lista.size();
+		}
 		cout << ">>> MOSTRANDO " << n << " IDADES:" << endl;
 		for(int i = 0; i < n; i++){
 			cout << lista[i] << endl;
