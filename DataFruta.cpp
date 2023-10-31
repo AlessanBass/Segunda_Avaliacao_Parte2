@@ -238,7 +238,7 @@ class ListaSalarios : public Lista  {
 	elementos vão existir na lista e depois
 	solicita a digitação de cada um deless
 	*/	
-	void entradaDeDados()override {
+	void entradaDeDados() override {
 		int quantidade;
 		float salario;
 
@@ -255,7 +255,7 @@ class ListaSalarios : public Lista  {
 		sort(lista.begin(),lista.end());
 	}
 			
-	void mostraMediana()override {
+	void mostraMediana() override {
 		int tamanho;
 		float mediana;
 
@@ -272,11 +272,12 @@ class ListaSalarios : public Lista  {
 		}
 	}
 	
-	void mostraMenor()override {
+	void mostraMenor() override {
 		cout << ">>> MOSTRANDO O MENOR SALARIO: " << endl;
 		cout << "O menor salario e: " << lista.front() << endl;
 		
 	}
+
 
 	void listarEmOrdem() override {
 		cout << ">>> MOSTRANDO AS IDADES DO MENOS PARA A MAIOR: " << endl;
@@ -286,7 +287,7 @@ class ListaSalarios : public Lista  {
 
 	}
 
-	void mostraNElementos(int n) override{
+	void mostraNElementos(int n) override {
 		cout << ">>> MOSTRANDO " << n << " IDADES:" << endl;
 		for(int i = 0; i < n; i++){
 			cout << lista[i] << endl;
@@ -296,7 +297,6 @@ class ListaSalarios : public Lista  {
 	}
 
 };
-
 
 class ListaIdades : public Lista {
 	vector<int> lista;
@@ -376,13 +376,14 @@ int main () {
 	vector<Lista*> listaDeListas;
 	int quantidade;
 	
-  	ListaNomes listaNomes;
+    ListaNomes listaNomes;
 	listaNomes.entradaDeDados();
 	listaDeListas.push_back(&listaNomes);
 	
 	ListaDatas listaDatas;
 	listaDatas.entradaDeDados();
 	listaDeListas.push_back(&listaDatas);
+	
 	
 	ListaSalarios listaSalarios;
 	listaSalarios.entradaDeDados();
